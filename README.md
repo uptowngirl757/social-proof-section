@@ -53,4 +53,4 @@ I need to get more comfortable with using the CSS grid cause it's dope and reall
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@uptowngirl757](https://www.frontendmentor.io/profile/uptowngirl757)
