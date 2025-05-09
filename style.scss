@@ -23,7 +23,11 @@ body {
   @include flexLayout;
   margin-block: 2rem;
   font-family: "Inter", sans-serif;
-  // min-width: 100%;
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size: contain, contain;
 }
 .social-proof {
   max-width: 1100px;
@@ -123,6 +127,10 @@ body {
 }
 
 @media all and (max-width: 800px) {
+  body {
+    background-image: url("./images/bg-pattern-top-mobile.svg"),
+      url("./images/bg-pattern-bottom-mobile.svg");
+  }
   .social-proof {
     max-width: 1100px;
     margin: 0 auto;
