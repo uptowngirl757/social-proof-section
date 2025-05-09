@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap"); //Primary
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+//Neutral
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$White: hsl(0, 0%, 100%);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+@mixin flexLayout($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+body {
+  min-height: 100vh;
+  @include flexLayout;
+  margin-block: 2rem;
+  font-family: "Inter", sans-serif;
+  // min-width: 100%;
+}
+.social-proof {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // gap: 4rem;
+    margin-block-end: 4rem;
+  }
+  &__title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    line-height: 1.2;
+    color: $very-dark-magenta;
+    margin-block-end: 1rem;
+  }
+  &__subtitle {
+    color: $dark-grayish-magenta;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    max-width: 400px;
+  }
+  &__ratings {
+    list-style: none;
+  }
+  &__rating {
+    background-color: $light-grayish-magenta;
+    width: 400px;
+    margin-block: 0.4rem;
+    @include flexLayout;
+    gap: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 11px;
+    color: $very-dark-magenta;
+    font-weight: 900;
+    font-size: 0.8rem;
+
+    &:nth-child(2),
+    &:last-child {
+      margin-block-start: 1rem;
+      margin-inline-start: 3.5rem;
+    }
+    &:last-child {
+      margin-inline-start: 6.5rem;
+    }
+  }
+  &__testimonials {
+    @include flexLayout;
+    margin-block-start: 4rem;
+    gap: 3rem;
+  }
+  &-testimonial {
+    background-color: $very-dark-magenta;
+    padding: 2.1rem;
+    color: $White;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    flex: 1 1 33%;
+
+    &:nth-child(2) {
+      margin-block-start: 3rem;
+    }
+    &:last-child {
+      margin-block-start: 6rem;
+    }
+
+    &__profile {
+      @include flexLayout(row, flex-start);
+      margin-block-end: 1.5rem;
+    }
+    &__image {
+      border-radius: 50%;
+      height: 40px;
+      margin-inline-end: 1.1rem;
+    }
+    &__info {
+      @include flexLayout(column, center, flex-start);
+      gap: 0.3rem;
+    }
+    &__name {
+      font-size: 0.9rem;
+      font-weight: 900;
+    }
+    &__status {
+      color: $soft-pink;
+    }
+    &__quote {
+      font-weight: 700;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      color: $light-grayish-magenta;
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .social-proof {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 90%;
+
+    &__top {
+      grid-template-columns: 1fr;
+    }
+    &__title {
+      text-align: center;
+      margin-block-end: 2rem;
+    }
+    &__subtitle {
+      text-align: center;
+      margin: 0 auto;
+    }
+    &__ratings {
+      margin-block-start: 3rem;
+    }
+    &__rating {
+      flex-direction: column;
+      margin: 0.4rem auto;
+      gap: 0.8rem;
+      &:nth-child(2),
+      &:last-child {
+        margin-inline: auto;
+      }
+    }
+    &__testimonials {
+      flex-direction: column;
+    }
+    &-testimonial {
+      &:nth-child(2),
+      &:last-child {
+        margin-block-start: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-block: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.social-proof {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 90%;
+}
+.social-proof__top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-block-end: 4rem;
+}
+.social-proof__title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  line-height: 1.2;
+  color: hsl(300, 43%, 22%);
+  margin-block-end: 1rem;
+}
+.social-proof__subtitle {
+  color: hsl(303, 10%, 53%);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 400px;
+}
+.social-proof__ratings {
+  list-style: none;
+}
+.social-proof__rating {
+  background-color: hsl(300, 24%, 96%);
+  width: 400px;
+  margin-block: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: 1rem;
+  border-radius: 11px;
+  color: hsl(300, 43%, 22%);
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+.social-proof__rating:nth-child(2), .social-proof__rating:last-child {
+  margin-block-start: 1rem;
+  margin-inline-start: 3.5rem;
+}
+.social-proof__rating:last-child {
+  margin-inline-start: 6.5rem;
+}
+.social-proof__testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 4rem;
+  gap: 3rem;
+}
+.social-proof-testimonial {
+  background-color: hsl(300, 43%, 22%);
+  padding: 2.1rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+  border-radius: 10px;
+  flex: 1 1 33%;
+}
+.social-proof-testimonial:nth-child(2) {
+  margin-block-start: 3rem;
+}
+.social-proof-testimonial:last-child {
+  margin-block-start: 6rem;
+}
+.social-proof-testimonial__profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block-end: 1.5rem;
+}
+.social-proof-testimonial__image {
+  border-radius: 50%;
+  height: 40px;
+  margin-inline-end: 1.1rem;
+}
+.social-proof-testimonial__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+.social-proof-testimonial__name {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+.social-proof-testimonial__status {
+  color: hsl(333, 80%, 67%);
+}
+.social-proof-testimonial__quote {
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: hsl(300, 24%, 96%);
+}
+
+@media all and (max-width: 800px) {
+  .social-proof {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .social-proof__top {
+    grid-template-columns: 1fr;
+  }
+  .social-proof__title {
+    text-align: center;
+    margin-block-end: 2rem;
+  }
+  .social-proof__subtitle {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .social-proof__ratings {
+    margin-block-start: 3rem;
+  }
+  .social-proof__rating {
+    flex-direction: column;
+    margin: 0.4rem auto;
+    gap: 0.8rem;
+  }
+  .social-proof__rating:nth-child(2), .social-proof__rating:last-child {
+    margin-inline: auto;
+  }
+  .social-proof__testimonials {
+    flex-direction: column;
+  }
+  .social-proof-testimonial:nth-child(2), .social-proof-testimonial:last-child {
+    margin-block-start: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
